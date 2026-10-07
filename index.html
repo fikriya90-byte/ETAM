@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>ETAM v6 - SMP Negeri 10 Samarinda</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "tertiary-fixed-dim": "#4edea3",
+          "surface-container-lowest": "#ffffff",
+          "on-error-container": "#93000a",
+          "on-primary-fixed": "#00174b",
+          "on-surface": "#131b2e",
+          "inverse-surface": "#283044",
+          "surface-bright": "#faf8ff",
+          "surface-container-highest": "#dae2fd",
+          "on-tertiary-fixed-variant": "#005236",
+          "role-pembina": "#10B981",
+          "secondary": "#4b41e1",
+          "primary": "#004ac6",
+          "on-tertiary-container": "#bdffdb",
+          "on-secondary-container": "#fffbff",
+          "secondary-container": "#645efb",
+          "outline": "#737686",
+          "primary-fixed-dim": "#b4c5ff",
+          "surface-variant": "#dae2fd",
+          "role-bendahara": "#EC4899",
+          "surface-subtle": "#F1F5F9",
+          "on-background": "#131b2e",
+          "role-wakil": "#3B82F6",
+          "on-surface-variant": "#434655",
+          "on-primary-fixed-variant": "#003ea8",
+          "role-ketua": "#8B5CF6",
+          "outline-variant": "#c3c6d7",
+          "surface": "#faf8ff",
+          "primary-fixed": "#dbe1ff",
+          "secondary-fixed": "#e2dfff",
+          "tertiary": "#006242",
+          "on-secondary-fixed-variant": "#3323cc",
+          "error": "#ba1a1a",
+          "tertiary-container": "#007d55",
+          "on-tertiary-fixed": "#002113",
+          "border-strong": "#CBD5E1",
+          "surface-tint": "#0053db",
+          "inverse-on-surface": "#eef0ff",
+          "surface-page": "#F8FAFC",
+          "tertiary-fixed": "#6ffbbe",
+          "on-primary": "#ffffff",
+          "error-container": "#ffdad6",
+          "role-sekretaris": "#EAB308",
+          "on-secondary": "#ffffff",
+          "on-primary-container": "#eeefff",
+          "surface-dim": "#d2d9f4",
+          "surface-container": "#eaedff",
+          "primary-container": "#2563eb",
+          "on-secondary-fixed": "#0f0069",
+          "inverse-primary": "#b4c5ff",
+          "on-tertiary": "#ffffff",
+          "status-danger": "#F43F5E",
+          "surface-card": "#FFFFFF",
+          "border-subtle": "#E2E8F0",
+          "surface-container-high": "#e2e7ff",
+          "on-error": "#ffffff",
+          "background": "#faf8ff",
+          "secondary-fixed-dim": "#c3c0ff",
+          "status-warning": "#F59E0B",
+          "role-anggota": "#64748B",
+          "surface-container-low": "#f2f3ff",
+          "role-dokumentasi": "#F97316"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter-lg": "2rem",
+          "space-2xl": "3rem",
+          "space-md": "1rem",
+          "margin-md": "1.5rem",
+          "space-xl": "2rem",
+          "gutter": "1rem",
+          "margin": "1rem",
+          "space-lg": "1.5rem",
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "margin-lg": "2.5rem",
+          "gutter-md": "1.5rem"
+        },
+        "fontFamily": {
+          "headline-md": ["Plus Jakarta Sans"],
+          "headline-lg": ["Plus Jakarta Sans"],
+          "label-lg": ["Plus Jakarta Sans"],
+          "label-sm": ["Plus Jakarta Sans"],
+          "caption-stamp": ["Plus Jakarta Sans"],
+          "headline-lg-mobile": ["Plus Jakarta Sans"],
+          "label-md": ["Plus Jakarta Sans"],
+          "body-lg": ["Plus Jakarta Sans"],
+          "display-code-mobile": ["Plus Jakarta Sans"],
+          "body-md": ["Plus Jakarta Sans"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "display-code": ["Plus Jakarta Sans"],
+          "headline-sm": ["Plus Jakarta Sans"]
+        },
+        "fontSize": {
+          "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+          "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+          "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.2px", "fontWeight": "600"}],
+          "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.5px", "fontWeight": "700"}],
+          "caption-stamp": ["11px", {"lineHeight": "15px", "fontWeight": "500"}],
+          "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+          "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "600"}],
+          "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+          "display-code-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "3px", "fontWeight": "800"}],
+          "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+          "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+          "display-code": ["48px", {"lineHeight": "56px", "letterSpacing": "4px", "fontWeight": "800"}],
+          "headline-sm": ["18px", {"lineHeight": "26px", "fontWeight": "600"}]
+        }
+      }
+    }
+  }</script></head><body class="bg-surface-page font-body-md text-on-surface min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1280px] mx-auto px-margin-lg flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><div class="w-11 h-11 rounded-xl bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm shadow-sm">E</div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">ETAM <span class="text-primary font-label-md text-label-md bg-primary-fixed text-on-primary-fixed px-space-xs py-0.5 rounded">v6</span></span></div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">SMP Negeri 10 Samarinda</span></div></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg"><a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" data-path="dashboard" href="#">Dashboard</a><a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" data-path="presensi-sesi" href="#">Presensi Sesi</a><a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" data-path="struktur-organisasi" href="#">Struktur Organisasi</a><a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" data-path="kas-ekskul" href="#">Kas Ekskul</a><a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" data-path="layanan-password-dan-log" href="#">Layanan Password &amp; Log</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm pl-space-md py-space-xs bg-surface-subtle rounded-full border border-border-subtle"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface">Administrator ETAM</span><span class="font-caption-stamp text-caption-stamp text-on-surface-variant">admin@smp10smd.com</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-fixed" src="https://lh3.googleusercontent.com/aida/AEtjO1XXf4IziJxvGWzp0woaDCylfj8K1K8KhwskzEj44O4Cd3YG2Sw94culRDHyb7735GyVOMht0WEZ0FSQ1rpKkifu5OYyx9MVVGXuBAqKx-ZF15tH6FLM5f6m75NsmeubrONvitcWWSxxTBAEJ_njfMH5zZ26h15tDvu1V-1c76pLATMPeonY0lk7Xwifo1VSFbVd_Q9kp5BWp46QR4t0zEoKm1JjD1VADnV8ANxvYrzIfUkvwPB37tck4lQ"/></div></div></div></header><main class="w-full pt-20 bg-surface-page min-h-[calc(100vh-140px)]"><div class="flex flex-col w-full">
+<!-- Interactive Feedback Toast -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 ease-out pointer-events-none flex items-center gap-space-sm px-space-md py-space-sm rounded-lg bg-inverse-surface text-inverse-on-surface shadow-xl" id="toastNotification">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md" id="toastMessage">Aksi berhasil diproses</span>
+</div>
+<div class="max-w-[1280px] mx-auto w-full px-margin-lg py-space-xl flex flex-col gap-space-xl">
+<!-- Breadcrumb & Page Head Section -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<nav class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span>ETAM v6</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Keamanan &amp; Sistem</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">Log Aktivitas &amp; Cadangan Google Drive</span>
+</nav>
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Log Audit Aktivitas &amp; Manajemen Cadangan Cloud
+          </h1>
+<span class="px-space-xs py-0.5 rounded font-caption-stamp text-caption-stamp bg-primary-fixed text-on-primary-fixed uppercase tracking-wider">
+            Sheet 14 &amp; Drive Core
+          </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Pemantauan rekaman audit aktivitas 6 bulan terakhir dan manajemen rotasi 4 berkas cadangan otomatis mingguan Google Drive. Terintegrasi langsung dengan Apps Script Time-driven Trigger.
+        </p>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="h-10 px-space-md rounded-md bg-surface-card hover:bg-surface-subtle text-on-surface font-label-lg text-label-lg flex items-center gap-space-xs shadow-sm transition-all active:scale-[0.98]" id="btnSyncLogs">
+<span class="material-symbols-outlined text-[18px] text-primary">sync</span>
+<span>Sinkronkan Log Terkini</span>
+</button>
+<button class="h-10 px-space-md rounded-md bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg flex items-center gap-space-xs shadow-md transition-all active:scale-[0.98]" id="btnManualBackup">
+<span class="material-symbols-outlined text-[18px]">cloud_download</span>
+<span>Buat Backup Manual (JSON)</span>
+</button>
+<button class="h-10 px-space-md rounded-md bg-surface-card hover:bg-error-container text-error hover:text-on-error-container font-label-lg text-label-lg flex items-center gap-space-xs shadow-sm transition-all active:scale-[0.98]" onclick="document.getElementById('restoreModal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-[18px]">restore</span>
+<span>Pulihkan / Restore Data</span>
+</button>
+</div>
+</div>
+<!-- 4 High-Impact KPI Metric Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- KPI 1 -->
+<div class="bg-surface-card p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-20 h-20 bg-primary/5 rounded-full blur-xl group-hover:scale-125 transition-transform duration-500"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Log Tercatat</span>
+<div class="w-9 h-9 rounded-lg bg-surface-subtle flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">shield_person</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-headline-md text-headline-md text-on-surface tracking-tight">14,820 Baris</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-role-pembina"></span>
+            Sheet 14: logs • Retensi 6 Bulan Aktif
+          </span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-card p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-20 h-20 bg-role-pembina/10 rounded-full blur-xl group-hover:scale-125 transition-transform duration-500"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Cadangan Otomatis</span>
+<div class="w-9 h-9 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[20px]">cloud_sync</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Aktif</span>
+<span class="px-space-xs py-0.5 rounded text-[10px] font-bold bg-tertiary-fixed text-on-tertiary-fixed uppercase">Trigger Mingguan</span>
+</div>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant truncate">
+            Sabtu 23:59 WITA via Apps Script
+          </span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-card p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-20 h-20 bg-secondary/5 rounded-full blur-xl group-hover:scale-125 transition-transform duration-500"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Rotasi Berkas Drive</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">folder_supervised</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-headline-md text-headline-md text-on-surface tracking-tight">4 Berkas (W40-W43)</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant truncate">
+            Folder: /ETAM/Backup Mingguan/
+          </span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-card p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-20 h-20 bg-tertiary/10 rounded-full blur-xl group-hover:scale-125 transition-transform duration-500"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Audit Integritas Data</span>
+<div class="w-9 h-9 rounded-lg bg-surface-subtle flex items-center justify-center text-role-pembina">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-headline-md text-headline-md text-role-pembina tracking-tight">0 Pelanggaran</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant truncate">
+            Enkripsi Payload SHA-256 Valid
+          </span>
+</div>
+</div>
+</div>
+<!-- Section 1: Manajemen Backup & Restore Google Drive (Blueprint 26) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Panel A: Rolling Weekly Backup Rotation (8 Cols) -->
+<div class="lg:col-span-8 bg-surface-card p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Rotasi Cadangan Mingguan Google Drive</h2>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">Arsip rotasi 4 siklus kalender mingguan (JSON multi-sheet)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-role-pembina"></span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">Drive Terkoneksi: etam-cloud@smp10smd.com</span>
+</div>
+</div>
+<!-- Rotation Table / Cards -->
+<div class="flex flex-col gap-space-xs overflow-x-auto">
+<!-- Backup 1 (Latest) -->
+<div class="p-space-md rounded-lg bg-surface-subtle hover:bg-surface-container transition-colors flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">data_object</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">ETAM_backup_2026-W43.json</span>
+<span class="px-space-xs py-0.5 rounded font-caption-stamp text-caption-stamp bg-tertiary-fixed text-on-tertiary-fixed font-bold">Terbaru</span>
+<span class="px-space-xs py-0.5 rounded font-caption-stamp text-caption-stamp bg-primary-fixed text-on-primary-fixed">16 Sheet</span>
+</div>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">
+                  24 Okt 2026 • 23:59 WITA • 4.8 MB • ID: <code class="font-mono text-on-surface">1b8Yx...W43</code>
+</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-auto flex-shrink-0">
+<button class="px-space-sm py-1.5 rounded bg-surface-card hover:bg-surface-bright text-on-surface font-label-md text-label-md shadow-sm transition-all" onclick="previewJson('ETAM_backup_2026-W43.json', '24 Okt 2026 23:59 WITA', '4.8 MB')">Pratinjau</button>
+<button class="px-space-sm py-1.5 rounded bg-surface-card hover:bg-surface-bright text-primary font-label-md text-label-md shadow-sm flex items-center gap-1 transition-all" onclick="triggerDownload('ETAM_backup_2026-W43.json')">
+<span class="material-symbols-outlined text-[16px]">download</span> Unduh
+              </button>
+<button class="px-space-sm py-1.5 rounded bg-surface-card hover:bg-error-container text-error hover:text-on-error-container font-label-md text-label-md shadow-sm transition-all" onclick="promptRestore('ETAM_backup_2026-W43.json')">Restore</button>
+</div>
+</div>
+<!-- Backup 2 -->
+<div class="p-space-md rounded-lg bg-surface-subtle hover:bg-surface-container transition-colors flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-card text-on-surface-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">data_object</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">ETAM_backup_2026-W42.json</span>
+<span class="px-space-xs py-0.5 rounded font-caption-stamp text-caption-stamp bg-surface-card text-on-surface-variant">16 Sheet</span>
+</div>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">
+                  17 Okt 2026 • 23:59 WITA • 4.7 MB • ID: <code class="font-mono text-on-surface">1b8Yx...W42</code>
+</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-auto flex-shrink-0">
+<button class="px-space-sm py-1.5 rounded bg-surface-card hover:bg-surface-bright text-primary font-label-md text-label-md shadow-sm flex items-center gap-1 transition-all" onclick="triggerDownload('ETAM_backup_2026-W42.json')">
+<span class="material-symbols-outlined text-[16px]">download</span> Unduh
+              </button>
+<button class="px-space-sm py-1.5 rounded bg-surface-card hover:bg-error-container text-error hover:text-on-error-container font-label-md text-label-md shadow-sm transition-all" onclick="promptRestore('ETAM_backup_2026-W42.json')">Restore</button>
+</div>
+</div>
+<!-- Backup 3 -->
+<div class="p-space-md rounded-lg bg-surface-subtle hover:bg-surface-container transition-colors flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-card text-on-surface-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">data_object</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">ETAM_backup_2026-W41.json</span>
+<span class="px-space-xs py-0.5 rounded font-caption-stamp text-caption-stamp bg-surface-card text-on-surface-variant">16 Sheet</span>
+</div>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">
+                  10 Okt 2026 • 23:59 WITA • 4.5 MB • ID: <code class="font-mono text-on-surface">1b8Yx...W41</code>
+</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-auto flex-shrink-0">
+<button class="px-space-sm py-1.5 rounded bg-surface-card hover:bg-surface-bright text-primary font-label-md text-label-md shadow-sm flex items-center gap-1 transition-all" onclick="triggerDownload('ETAM_backup_2026-W41.json')">
+<span class="material-symbols-outlined text-[16px]">download</span> Unduh
+              </button>
+<button class="px-space-sm py-1.5 rounded bg-surface-card hover:bg-error-container text-error hover:text-on-error-container font-label-md text-label-md shadow-sm transition-all" onclick="promptRestore('ETAM_backup_2026-W41.json')">Restore</button>
+</div>
+</div>
+<!-- Backup 4 (Oldest) -->
+<div class="p-space-md rounded-lg bg-surface-subtle hover:bg-surface-container transition-colors flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-card text-on-surface-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">data_object</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">ETAM_backup_2026-W40.json</span>
+<span class="px-space-xs py-0.5 rounded font-caption-stamp text-caption-stamp bg-status-warning/20 text-on-surface font-semibold">Antrean Timpa</span>
+<span class="px-space-xs py-0.5 rounded font-caption-stamp text-caption-stamp bg-surface-card text-on-surface-variant">16 Sheet</span>
+</div>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">
+                  03 Okt 2026 • 23:59 WITA • 4.3 MB • ID: <code class="font-mono text-on-surface">1b8Yx...W40</code>
+</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-auto flex-shrink-0">
+<button class="px-space-sm py-1.5 rounded bg-surface-card hover:bg-surface-bright text-primary font-label-md text-label-md shadow-sm flex items-center gap-1 transition-all" onclick="triggerDownload('ETAM_backup_2026-W40.json')">
+<span class="material-symbols-outlined text-[16px]">download</span> Unduh
+              </button>
+<button class="px-space-sm py-1.5 rounded bg-surface-card hover:bg-error-container text-error hover:text-on-error-container font-label-md text-label-md shadow-sm transition-all" onclick="promptRestore('ETAM_backup_2026-W40.json')">Restore</button>
+</div>
+</div>
+</div>
+<!-- Rotation Policy Notice -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0 mt-0.5">info</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong>Mekanisme Blueprint 26:</strong> Sistem otomatis menimpa file tertua (W40) pada jadwal Sabtu berikutnya (31 Okt 2026) agar kapasitas kuota Google Drive 15GB sekolah tetap stabil dan bebas biaya penambahan penyimpanan.
+          </p>
+</div>
+</div>
+<!-- Panel B: Cadangan Manual & Dropzone Restore (4 Cols) -->
+<div class="lg:col-span-4 bg-surface-card p-space-lg rounded-xl shadow-sm flex flex-col justify-between gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">cloud_upload</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Snapshot Darurat</h2>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">Ekspor &amp; impor berkas JSON database</span>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-subtle flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Snapshot Manual Saat Ini</span>
+<p class="font-caption-stamp text-caption-stamp text-on-surface-variant">
+              Unduh salinan langsung 16 sheet termasuk status sesi terkini tanpa menunggu jadwal mingguan.
+            </p>
+<button class="mt-space-xs w-full py-2 px-space-md rounded-md bg-surface-card hover:bg-surface-bright text-primary font-label-md text-label-md shadow-sm flex items-center justify-center gap-space-xs transition-colors" id="btnDownloadInstant">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span>Unduh Snapshot JSON Sekarang</span>
+</button>
+</div>
+<!-- Restore Dropzone Sandbox -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Pemulihan / Restore Data</span>
+<div class="border-2 border-dashed border-border-strong rounded-xl p-space-md flex flex-col items-center justify-center text-center gap-space-xs bg-surface-container-low/50 hover:bg-surface-container-low transition-all cursor-pointer" id="dropzoneRestore">
+<span class="material-symbols-outlined text-[32px] text-on-surface-variant">upload_file</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Tarik berkas .JSON ke sini</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">atau klik untuk memilih berkas dari komputer</span>
+<input accept=".json" class="hidden" id="fileInputRestore" type="file"/>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-error-container/40 flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-error text-[18px] flex-shrink-0 mt-0.5">warning</span>
+<p class="font-caption-stamp text-caption-stamp text-on-error-container">
+<strong>Peringatan Otoritas:</strong> Operasi pemulihan akan mereplace seluruh sheet aktif secara permanen. Membutuhkan verifikasi kata sandi master kepala sekolah.
+          </p>
+</div>
+</div>
+</div>
+<!-- Section 2: Log Audit Aktivitas Real-Time (Sheet 14: logs - Blueprint 28) -->
+<div class="bg-surface-card rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<!-- Filter Bar & Search Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Rekaman Audit Aktivitas (Sheet 14: logs)</h2>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">Tercatat kronologis tanpa perantara - Immutable Event Sourcing</span>
+</div>
+</div>
+<!-- Filter Controls -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<!-- Search Input -->
+<div class="relative min-w-[240px]">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[18px]">search</span>
+<input class="h-10 pl-9 pr-3 w-full rounded-md bg-surface-subtle text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-card focus:shadow-sm transition-all" id="logSearchInput" placeholder="Cari ID, User, Aksi, atau IP..." type="text"/>
+</div>
+<!-- Kategori Dropdown -->
+<select class="h-10 px-space-sm rounded-md bg-surface-subtle text-on-surface font-label-md text-label-md focus:outline-none cursor-pointer" id="logCategoryFilter">
+<option value="ALL">Semua Kategori Aksi</option>
+<option value="AUTH">Autentikasi &amp; Akses</option>
+<option value="PRESENSI">Presensi &amp; Perizinan</option>
+<option value="KAS">Kas &amp; Finansial</option>
+<option value="PENGUMUMAN">Pengumuman &amp; Kegiatan</option>
+<option value="CONFIG">Konfigurasi &amp; Cadangan</option>
+</select>
+<!-- Waktu Filter -->
+<select class="h-10 px-space-sm rounded-md bg-surface-subtle text-on-surface font-label-md text-label-md focus:outline-none cursor-pointer" id="logTimeFilter">
+<option value="TODAY">Hari Ini (26 Okt)</option>
+<option value="7D">7 Hari Terakhir</option>
+<option value="MONTH">Bulan Ini (Oktober 2026)</option>
+<option value="ALL">Seluruh Log (Retensi 6 Bulan)</option>
+</select>
+<!-- Export CSV / Sheets -->
+<button class="h-10 px-space-md rounded-md bg-surface-subtle hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1 shadow-sm transition-colors" id="btnExportLogCsv">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Ekspor CSV</span>
+</button>
+</div>
+</div>
+<!-- Log Data Table Container -->
+<div class="overflow-x-auto rounded-lg">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-subtle text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<tr>
+<th class="py-space-sm px-space-md">ID Log &amp; Waktu</th>
+<th class="py-space-sm px-space-md">Pengguna (Aktor)</th>
+<th class="py-space-sm px-space-md">Aksi Sistem</th>
+<th class="py-space-sm px-space-md">Detail Payload (JSON)</th>
+<th class="py-space-sm px-space-md">Alamat IP &amp; Node</th>
+<th class="py-space-sm px-space-md text-right">Aksi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-subtle" id="logsTableBody">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-subtle/50 transition-colors group" data-category="AUTH">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-mono font-bold text-on-surface text-[13px]">LOG-20261026-8941</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">26 Okt 2026 • 14:10:15 WITA</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-bold text-[11px]">AD</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">u_admin</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">Administrator ETAM</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-1 rounded font-caption-stamp text-caption-stamp font-bold bg-primary-fixed text-on-primary-fixed uppercase">
+                  RESET_PASSWORD
+                </span>
+</td>
+<td class="py-space-md px-space-md max-w-xs">
+<div class="bg-surface-subtle p-space-xs rounded font-mono text-[11px] text-on-surface truncate cursor-pointer hover:bg-surface-container" data-json='{"target_user": "u_farhan2024", "nis": "202408119", "channel": "WA_LINK_DIRECT", "method": "SHA256_SEED"}' onclick="showJsonDetails(this)">
+                  {"target_user": "u_farhan2024", "nis": "202408119", "channel": "WA_LINK_DIRECT"...}
+                </div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-mono text-on-surface text-[12px]">180.252.88.14</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">Samarinda, ID</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" onclick="viewRowPayload('LOG-20261026-8941', 'u_admin', 'RESET_PASSWORD', '26 Okt 2026 14:10:15 WITA', '180.252.88.14', {'target_user': 'u_farhan2024', 'nis': '202408119', 'channel': 'WA_LINK_DIRECT', 'method': 'SHA256_SEED'})">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-subtle/50 transition-colors group" data-category="PENGUMUMAN">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-mono font-bold text-on-surface text-[13px]">LOG-20261026-8938</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">26 Okt 2026 • 14:02:40 WITA</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-role-pembina/20 text-role-pembina flex items-center justify-center font-bold text-[11px]">BS</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">u_pembina_budi</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">Drs. Budi Santoso</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-1 rounded font-caption-stamp text-caption-stamp font-bold bg-tertiary-fixed text-on-tertiary-fixed uppercase">
+                  PUBLISH_PENGUMUMAN
+                </span>
+</td>
+<td class="py-space-md px-space-md max-w-xs">
+<div class="bg-surface-subtle p-space-xs rounded font-mono text-[11px] text-on-surface truncate cursor-pointer hover:bg-surface-container" data-json='{"announcement_id": "ANN-20261026-004", "sheet": 12, "title": "Penyesuaian Jadwal Latihan Sumpah Pemuda", "notif_sent": 38}' onclick="showJsonDetails(this)">
+                  {"announcement_id": "ANN-20261026-004", "sheet": 12, "title": "Penyesuaian Jadwal..."}
+                </div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-mono text-on-surface text-[12px]">182.2.45.109</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">Samarinda, ID</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" onclick="viewRowPayload('LOG-20261026-8938', 'u_pembina_budi', 'PUBLISH_PENGUMUMAN', '26 Okt 2026 14:02:40 WITA', '182.2.45.109', {'announcement_id': 'ANN-20261026-004', 'sheet': 12, 'title': 'Penyesuaian Jadwal Latihan Sumpah Pemuda', 'notif_sent': 38})">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-subtle/50 transition-colors group" data-category="PRESENSI">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-mono font-bold text-on-surface text-[13px]">LOG-20261026-8922</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">26 Okt 2026 • 13:45:10 WITA</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-role-pembina/20 text-role-pembina flex items-center justify-center font-bold text-[11px]">HM</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">u_pembina_mulyadi</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">Drs. H. Mulyadi, M.Pd</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-1 rounded font-caption-stamp text-caption-stamp font-bold bg-tertiary-fixed text-on-tertiary-fixed uppercase">
+                  APPROVE_IZIN
+                </span>
+</td>
+<td class="py-space-md px-space-md max-w-xs">
+<div class="bg-surface-subtle p-space-xs rounded font-mono text-[11px] text-on-surface truncate cursor-pointer hover:bg-surface-container" data-json='{"presensi_id": "PRS-8812", "siswa": "Ahmad Raihan Farisi", "status": "sakit", "lampiran": "surat_dokter.pdf"}' onclick="showJsonDetails(this)">
+                  {"presensi_id": "PRS-8812", "siswa": "Ahmad Raihan Farisi", "status": "sakit"...}
+                </div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-mono text-on-surface text-[12px]">180.252.88.20</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">Samarinda, ID</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" onclick="viewRowPayload('LOG-20261026-8922', 'u_pembina_mulyadi', 'APPROVE_IZIN', '26 Okt 2026 13:45:10 WITA', '180.252.88.20', {'presensi_id': 'PRS-8812', 'siswa': 'Ahmad Raihan Farisi', 'status': 'sakit', 'lampiran': 'surat_dokter.pdf'})">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-subtle/50 transition-colors group" data-category="KAS">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-mono font-bold text-on-surface text-[13px]">LOG-20261026-8901</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">26 Okt 2026 • 11:20:00 WITA</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-role-ketua/20 text-role-ketua flex items-center justify-center font-bold text-[11px]">DN</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">u_bnd_desta</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">Desta Nugraha</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-1 rounded font-caption-stamp text-caption-stamp font-bold bg-secondary-fixed text-on-secondary-fixed uppercase">
+                  UPDATE_KAS
+                </span>
+</td>
+<td class="py-space-md px-space-md max-w-xs">
+<div class="bg-surface-subtle p-space-xs rounded font-mono text-[11px] text-on-surface truncate cursor-pointer hover:bg-surface-container" data-json='{"ekskul": "Silat Merpati Putih", "user": "Farhan Aditya", "nominal": 5000, "status": "lunas", "sheet": 8}' onclick="showJsonDetails(this)">
+                  {"ekskul": "Silat Merpati Putih", "user": "Farhan Aditya", "nominal": 5000...}
+                </div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-mono text-on-surface text-[12px]">114.124.210.55</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">Samarinda, ID</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" onclick="viewRowPayload('LOG-20261026-8901', 'u_bnd_desta', 'UPDATE_KAS', '26 Okt 2026 11:20:00 WITA', '114.124.210.55', {'ekskul': 'Silat Merpati Putih', 'user': 'Farhan Aditya', 'nominal': 5000, 'status': 'lunas', 'sheet': 8})">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-subtle/50 transition-colors group" data-category="CONFIG">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-mono font-bold text-on-surface text-[13px]">LOG-20261026-8854</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">26 Okt 2026 • 09:15:32 WITA</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-bold text-[11px]">AD</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">u_admin</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">Administrator ETAM</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-1 rounded font-caption-stamp text-caption-stamp font-bold bg-role-dokumentasi/20 text-role-dokumentasi uppercase">
+                  CONFIG_UPDATE
+                </span>
+</td>
+<td class="py-space-md px-space-md max-w-xs">
+<div class="bg-surface-subtle p-space-xs rounded font-mono text-[11px] text-on-surface truncate cursor-pointer hover:bg-surface-container" data-json='{"key": "kop_surat_url", "sheet": 13, "desc": "Pembaruan template cetak 3 lembar kedinasan"}' onclick="showJsonDetails(this)">
+                  {"key": "kop_surat_url", "sheet": 13, "desc": "Pembaruan template cetak..."}
+                </div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-mono text-on-surface text-[12px]">180.252.88.14</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">Samarinda, ID</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" onclick="viewRowPayload('LOG-20261026-8854', 'u_admin', 'CONFIG_UPDATE', '26 Okt 2026 09:15:32 WITA', '180.252.88.14', {'key': 'kop_surat_url', 'sheet': 13, 'desc': 'Pembaruan template cetak 3 lembar kedinasan'})">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-subtle/50 transition-colors group" data-category="CONFIG">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-mono font-bold text-on-surface text-[13px]">LOG-20261024-8700</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">24 Okt 2026 • 23:59:01 WITA</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-inverse-surface text-inverse-on-surface flex items-center justify-center font-bold text-[11px]">SYS</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">system_trigger</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">Google Apps Script</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-1 rounded font-caption-stamp text-caption-stamp font-bold bg-surface-container-high text-on-surface uppercase">
+                  BACKUP_ROTATION
+                </span>
+</td>
+<td class="py-space-md px-space-md max-w-xs">
+<div class="bg-surface-subtle p-space-xs rounded font-mono text-[11px] text-on-surface truncate cursor-pointer hover:bg-surface-container" data-json='{"archive": "ETAM_backup_2026-W43.json", "status": "SUCCESS", "sheets_synced": 16, "size_kb": 4820}' onclick="showJsonDetails(this)">
+                  {"archive": "ETAM_backup_2026-W43.json", "status": "SUCCESS", "sheets_synced": 16...}
+                </div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-mono text-on-surface text-[12px]">Internal GAS</span>
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">Cloud Trigger Runner</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" onclick="viewRowPayload('LOG-20261024-8700', 'system_trigger', 'BACKUP_ROTATION', '24 Okt 2026 23:59:01 WITA', 'Apps Script Internal', {'archive': 'ETAM_backup_2026-W43.json', 'status': 'SUCCESS', 'sheets_synced': 16, 'size_kb': 4820})">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Table Metadata Footer -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<span class="font-caption-stamp text-caption-stamp text-on-surface-variant">
+          Menampilkan 6 dari 14,820 entri (Halaman 1 dari 2,470)
+        </span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded bg-surface-subtle text-on-surface-variant hover:bg-surface-container flex items-center justify-center disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center justify-center">1</button>
+<button class="w-8 h-8 rounded bg-surface-subtle text-on-surface hover:bg-surface-container font-label-sm text-label-sm flex items-center justify-center">2</button>
+<button class="w-8 h-8 rounded bg-surface-subtle text-on-surface hover:bg-surface-container font-label-sm text-label-sm flex items-center justify-center">3</button>
+<span class="px-1 text-on-surface-variant">...</span>
+<button class="w-8 h-8 rounded bg-surface-subtle text-on-surface hover:bg-surface-container font-label-sm text-label-sm flex items-center justify-center">2470</button>
+<button class="w-8 h-8 rounded bg-surface-subtle text-on-surface-variant hover:bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Educational Policy & Zero-API SOP Footnote Banner -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">SOP Retensi Data &amp; Integritas Lembaga</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-3xl">
+            Sesuai regulasi kesiswaan SMP Negeri 10 Samarinda, log aktivitas disimpan selama minimum 6 bulan untuk kepentingan akreditasi dan verifikasi beasiswa. Sistem berjalan sepenuhnya di atas ekosistem Google Workspace for Education tanpa ketergantungan biaya API pihak ketiga.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<span class="px-space-sm py-1 rounded bg-surface-card text-on-surface font-mono text-[11px] font-bold shadow-sm">
+          SHA-256 HMAC SECURE
+        </span>
+</div>
+</div>
+</div>
+<!-- MODAL: Detailed JSON Payload Viewer -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden flex items-center justify-center p-space-md" id="jsonModal">
+<div class="bg-surface-card rounded-2xl shadow-xl max-w-xl w-full p-space-lg flex flex-col gap-space-md transform transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">code</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" id="modalLogTitle">Detail Payload Log</h3>
+</div>
+<button class="w-8 h-8 rounded-full hover:bg-surface-subtle flex items-center justify-center text-on-surface-variant" onclick="document.getElementById('jsonModal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-caption-stamp text-on-surface-variant font-caption-stamp">
+<span id="modalLogActor">Aktor: -</span>
+<span id="modalLogTime">Waktu: -</span>
+</div>
+<div class="flex items-center justify-between text-caption-stamp text-on-surface-variant font-caption-stamp">
+<span id="modalLogIp">IP: -</span>
+<span class="font-bold text-primary" id="modalLogAction">AKSI</span>
+</div>
+</div>
+<div class="bg-inverse-surface text-inverse-on-surface p-space-md rounded-xl font-mono text-xs overflow-x-auto max-h-72">
+<pre class="whitespace-pre-wrap leading-relaxed" id="modalJsonContent"></pre>
+</div>
+<div class="flex items-center justify-end gap-space-xs pt-space-xs">
+<button class="px-space-md py-2 rounded-md bg-surface-subtle hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1" onclick="copyModalJson()">
+<span class="material-symbols-outlined text-[16px]">content_copy</span> Salin JSON
+        </button>
+<button class="px-space-md py-2 rounded-md bg-primary text-on-primary font-label-md text-label-md shadow-sm" onclick="document.getElementById('jsonModal').classList.add('hidden')">
+          Tutup
+        </button>
+</div>
+</div>
+</div>
+<!-- MODAL: Restore Data Danger Confirmation (Double Otorisasi) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden flex items-center justify-center p-space-md" id="restoreModal">
+<div class="bg-surface-card rounded-2xl shadow-xl max-w-lg w-full p-space-lg flex flex-col gap-space-lg transform transition-all border-t-4 border-status-danger">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-error-container text-error flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[28px]">warning</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-error">Konfirmasi Pemulihan Database</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Anda akan melakukan restore berkas: <strong class="text-on-surface" id="restoreTargetFilename">ETAM_backup_2026-W43.json</strong>.
+          </p>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-error-container/30 text-on-error-container flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md font-bold">PERHATIAN TINGKAT TINGGI:</span>
+<ul class="list-disc pl-5 font-caption-stamp text-caption-stamp space-y-1">
+<li>Seluruh data pada 16 sheet aktif akan ditimpa dengan keadaan berkas cadangan.</li>
+<li>Data transaksi kas dan presensi yang dibuat setelah waktu backup akan terhapus permanen.</li>
+<li>Wajib memasukkan PIN Otorisasi Kepala Sekolah untuk melanjutkan.</li>
+</ul>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider" for="restoreAdminPin">
+          PIN Otorisasi Master (Admin / Kepala Sekolah)
+        </label>
+<input class="h-11 px-space-md rounded-lg bg-surface-subtle text-on-surface font-mono text-center tracking-widest text-lg focus:outline-none focus:bg-surface-card focus:shadow-md" id="restoreAdminPin" maxlength="6" placeholder="Masukkan 6-digit PIN Keamanan..." type="password"/>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2.5 rounded-md bg-surface-subtle hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" onclick="document.getElementById('restoreModal').classList.add('hidden')">
+          Batal
+        </button>
+<button class="px-space-md py-2.5 rounded-md bg-status-danger hover:opacity-90 text-on-error font-label-md text-label-md shadow-md flex items-center gap-1 transition-all" id="btnExecuteRestore">
+<span class="material-symbols-outlined text-[18px]">restore</span>
+<span>Eksekusi Pemulihan Sekarang</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Embedded Client-Side Interactive Logic -->
+<script>
+    // Toast Notification Utility
+    function showNotification(msg) {
+      const toast = document.getElementById('toastNotification');
+      const toastMsg = document.getElementById('toastMessage');
+      if (!toast || !toastMsg) return;
+      toastMsg.textContent = msg;
+      toast.classList.remove('opacity-0', 'translate-y-24', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-24', 'pointer-events-none');
+      }, 3500);
+    }
+
+    // Modal Trigger: Row Payload
+    function viewRowPayload(id, actor, action, time, ip, payload) {
+      document.getElementById('modalLogTitle').textContent = `Detail Payload: ${id}`;
+      document.getElementById('modalLogActor').textContent = `Aktor: ${actor}`;
+      document.getElementById('modalLogTime').textContent = `Waktu: ${time}`;
+      document.getElementById('modalLogIp').textContent = `IP: ${ip}`;
+      document.getElementById('modalLogAction').textContent = action;
+      document.getElementById('modalJsonContent').textContent = JSON.stringify(payload, null, 2);
+      document.getElementById('jsonModal').classList.remove('hidden');
+    }
+
+    // Quick inline snippet click
+    function showJsonDetails(el) {
+      try {
+        const raw = el.getAttribute('data-json');
+        const parsed = JSON.parse(raw);
+        viewRowPayload('INLINE_PAYLOAD', 'Pelaksana Sistem', 'INSPEKSI', 'Terbaru', '180.252.88.x', parsed);
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    // Copy JSON from modal
+    function copyModalJson() {
+      const content = document.getElementById('modalJsonContent').textContent;
+      navigator.clipboard.writeText(content).then(() => {
+        showNotification('JSON Payload berhasil disalin ke papan klip');
+      });
+    }
+
+    // Download Backup simulation
+    function triggerDownload(filename) {
+      showNotification(`Mengunduh berkas arsip: ${filename}...`);
+    }
+
+    // Prompt restore single file
+    function promptRestore(filename) {
+      document.getElementById('restoreTargetFilename').textContent = filename;
+      document.getElementById('restoreModal').classList.remove('hidden');
+    }
+
+    // Quick Preview JSON Simulation
+    function previewJson(filename, date, size) {
+      const sample = {
+        metadata: {
+          archive_name: filename,
+          generated_at: date,
+          size_approx: size,
+          system: "ETAM v6 - SMP Negeri 10 Samarinda",
+          engine: "Google Apps Script V8 Engine"
+        },
+        sheets_included: [
+          "01_users", "02_roles", "03_ekskul", "04_pembina", "05_pengurus",
+          "06_anggota", "07_sesi", "08_presensi", "09_kas_masuk", "10_kas_keluar",
+          "11_dokumentasi", "12_pengumuman", "13_config", "14_logs", "15_audit", "16_meta"
+        ],
+        integrity_hash: "3cf41a99b4007e15d86ef8e81137c87c94314c40212f12c8a14b0b14dc956488"
+      };
+      viewRowPayload(filename, 'Google Apps Script', 'BACKUP_INSPECT', date, 'Drive Engine', sample);
+    }
+
+    // Filter Logic for table
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('logSearchInput');
+      const catFilter = document.getElementById('logCategoryFilter');
+      const rows = document.querySelectorAll('#logsTableBody tr');
+
+      function filterTable() {
+        const query = searchInput.value.toLowerCase();
+        const selectedCat = catFilter.value;
+
+        rows.forEach(row => {
+          const text = row.textContent.toLowerCase();
+          const rowCat = row.getAttribute('data-category');
+
+          const matchesQuery = text.includes(query);
+          const matchesCat = (selectedCat === 'ALL') || (rowCat === selectedCat);
+
+          if (matchesQuery && matchesCat) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      }
+
+      if (searchInput) searchInput.addEventListener('input', filterTable);
+      if (catFilter) catFilter.addEventListener('change', filterTable);
+
+      // Button: Sync Logs
+      const btnSync = document.getElementById('btnSyncLogs');
+      if (btnSync) {
+        btnSync.addEventListener('click', () => {
+          btnSync.classList.add('animate-pulse');
+          setTimeout(() => {
+            btnSync.classList.remove('animate-pulse');
+            showNotification('Log Sheet 14 berhasil disinkronkan dengan data Apps Script terkini');
+          }, 800);
+        });
+      }
+
+      // Button: Manual Backup
+      const btnManual = document.getElementById('btnManualBackup');
+      if (btnManual) {
+        btnManual.addEventListener('click', () => {
+          showNotification('Memulai proses snapshot 16 Sheet ke JSON Google Drive...');
+          setTimeout(() => {
+            showNotification('Backup darurat selesai: ETAM_manual_snap_20261026.json tersimpan');
+          }, 1500);
+        });
+      }
+
+      // Button: Instant Download
+      const btnInstant = document.getElementById('btnDownloadInstant');
+      if (btnInstant) {
+        btnInstant.addEventListener('click', () => {
+          triggerDownload('ETAM_instant_snapshot_20261026.json');
+        });
+      }
+
+      // Export CSV
+      const btnExport = document.getElementById('btnExportLogCsv');
+      if (btnExport) {
+        btnExport.addEventListener('click', () => {
+          showNotification('Mengekspor 14,820 baris Sheet 14 ke CSV...');
+        });
+      }
+
+      // Execute Restore Action
+      const btnRestore = document.getElementById('btnExecuteRestore');
+      if (btnRestore) {
+        btnRestore.addEventListener('click', () => {
+          const pin = document.getElementById('restoreAdminPin').value;
+          if (pin.length < 6) {
+            alert('Harap masukkan 6-digit PIN Keamanan Kepala Sekolah yang valid.');
+            return;
+          }
+          document.getElementById('restoreModal').classList.add('hidden');
+          showNotification('Otorisasi diverifikasi. Memulai proses pemulihan database dari Google Drive...');
+        });
+      }
+
+      // Dropzone simulation
+      const dropzone = document.getElementById('dropzoneRestore');
+      const fileInput = document.getElementById('fileInputRestore');
+      if (dropzone && fileInput) {
+        dropzone.addEventListener('click', () => fileInput.click());
+        fileInput.addEventListener('change', (e) => {
+          if (e.target.files.length > 0) {
+            const fName = e.target.files[0].name;
+            promptRestore(fName);
+          }
+        });
+      }
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-low shadow-[0_-1px_6px_rgba(0,0,0,0.02)] mt-space-2xl"><div class="max-w-[1280px] mx-auto px-margin-lg py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg"><div class="flex flex-col gap-space-xs text-center md:text-left"><div class="flex items-center justify-center md:justify-start gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary">ETAM v6</span><span class="font-caption-stamp text-caption-stamp px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-bold uppercase">Sistem Terpadu</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Manajemen Kegiatan &amp; Presensi Ekstrakurikuler SMP Negeri 10 Samarinda. Integritas data kegiatan kesiswaan berbasis geolokasi &amp; peran terpadu.</p><span class="font-caption-stamp text-caption-stamp text-on-surface-variant">© 2026 Tim IT SMP Negeri 10 Samarinda • Jalan Untung Suropati, Karang Asam Ulu, Kota Samarinda, Kaltim.</span></div><div class="flex flex-col sm:flex-row items-center gap-space-sm"><div class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg bg-surface-card border border-border-subtle shadow-sm"><div class="w-2.5 h-2.5 rounded-full bg-role-pembina animate-pulse"></div><div class="flex flex-col text-left"><span class="font-label-sm text-label-sm text-on-surface uppercase">Zero-API Core</span><span class="font-caption-stamp text-caption-stamp text-on-surface-variant">Google Cloud Free Tier &amp; Apps Script</span></div></div></div></div></footer></body></html>
